@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto con JavaScript</title>
+    <link rel="stylesheet" href="css/styles.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ==" crossorigin="anonymous"></script>
+    <script src="js/main.js"></script>    
+</head>
+
+<body>
+    <section id="global">
+        <header>
+            <div id="logo">
+                <h1>Proyecto JS</h1>
+            </div>
+            <div class="clearfix"></div>
+            <nav id="menu">
+                <ul>
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#">Reloj</a></li>
+                    <li><a href="#">Sobre mi</a></li>
+                    <li><a href="#">Contacto</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div id="slider">
+            <div class="bxslider">
+                <div><img src="img/hojas.jpg" title="Hojas"></div>
+                <div><img src="img/rojo.jpg" title="Rojo"></div>
+                <div><img src="img/cielo.jpg" title="cielo"></div>
+              </div>
+        </div>
+        <section id="content">
+            <div id="posts">
+                
+            </div>
+            <sidebar id="sidebar">
+                <div id="about">
+                    <h4><span>¿Quien soy?</span></h4>
+                    <img src="img/caracol.jpg" alt="">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente aspernatur quae reiciendis maiores animi repellendus culpa vel ipsam deleniti. Labore, eos! Laborum doloribus consequuntur perferendis aliquid obcaecati illum cupiditate neque.</p> 
+                </div>
+                <div id="login">
+                    <h4><span>Identificate</span></h4>
+                        <form action="">
+                            <label for="name">
+                                Nombre
+                            </label>
+                            <input type="text" name="name">
+                            <label for="email">
+                                Correo
+                            </label>
+                            <input type="text" name="email">
+                            <label for="pasword">
+                                Contraseña
+                            </label>
+                            <input type="password" name="passwor">
+                            <input type="submit" value="Entrar">
+                        </form> 
+                    
+                </div>
+            </sidebar>
+            <div class="clearfix"></div>
+        </section>
+    </section>
+    <footer>
+        Aprendiendo JavaScript &copy;
+    </footer>
+</body>
+</html>
