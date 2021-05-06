@@ -7,12 +7,16 @@
     <title>Proyecto con JavaScript</title>
     <link rel="stylesheet" href="css/styles.css"/>
     <link id="theme" rel="stylesheet" href="css/green.css">
+    <link rel="stylesheet" href="jquery-ui/jquery-ui.min.css" />
+    <link rel="stylesheet" href="jquery-ui/jquery-ui.structure.min.css" />
+    <link rel="stylesheet" href="jquery-ui/jquery-ui.theme.min.css" />
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ==" crossorigin="anonymous"></script>
-    <script src="js/main.js"></script>    
+    <script type="text/javascript" src="jquery-ui/jquery-ui.min.js"></script>
+
+    <script src="js/main.js"></script>
+    <script src="js/jquery.form-validator.min.js"></script>    
 </head>
 
 <body>
@@ -29,23 +33,35 @@
             <div class="clearfix"></div>
             <nav id="menu">
                 <ul>
-                    <li><a href="#">Inicio</a></li>
+                    <li><a href="index.html">Inicio</a></li>
                     <li><a href="reloj.html">Reloj</a></li>
                     <li><a href="about.html">Sobre mi</a></li>
-                    <li><a href="contact.html">Contacto</a></li>
+                    <li><a href="#">Contacto</a></li>
                 </ul>
             </nav>
         </header>
-        <div id="slider">
-            <div class="bxslider">
-                <div><img src="img/hojas.jpg" title="Hojas"></div>
-                <div><img src="img/rojo.jpg" title="Rojo"></div>
-                <div><img src="img/cielo.jpg" title="cielo"></div>
-              </div>
-        </div>
         <section id="content">
-            <div id="posts">
+            <div id="box">
+                <h2>Contacto</h2>
+                <form action="" method="post" id="form_contact">
+                    <label for="name">Nombre</label>
+                        <input type="text" name="name" data-validation="alphanumeric" > 
+                    <label for="surname">Apellidos</label>
+                        <input type="text" name="surname" data-validation="alphanumeric">
+                    <label for="email">Email</label>
+                        <input type="email" name="email" data-validation="email">
+                    <label for="sex">Sexo</label>
+                        <select name="sex" data-validation="required">
+                            <option value="men">Hombre</option>
+                            <option value="woman">Mujer</option>
+                        </select>
+                    <label for="date">Fecha de nacimiento</label>
+                        <input type="text" name="date" data-validation="date" data-validation-format="dd-mm-yy">
+                    <label for="years">Edad</label>
+                        <input type="number" name="years"  data-validation="number">
                 
+                    <input type="submit" value="Enviar">
+                </form>
             </div>
             <sidebar id="sidebar">
                 <div id="about">

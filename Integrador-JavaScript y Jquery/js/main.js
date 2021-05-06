@@ -1,14 +1,16 @@
 //slider
 $(document).ready(function(){
     
+  if(window.location.href.indexOf('index')> -1){
     $('.bxslider').bxSlider({
       mode: 'fade',
       captions: true,
       slideWidth: 1200
     });
-
+  }
 
     //Posts
+    if(window.location.href.indexOf('index')> -1){
   var posts = [
     {
         title: 'prueba de titulo 1',
@@ -47,7 +49,7 @@ $(document).ready(function(){
                 
     $("#posts").append(post);
   });
-   
+}
   //Selector de temas
   var theme = $("#theme");
   $("#to-green").click(()=>{
@@ -72,6 +74,47 @@ $(document).ready(function(){
     
     return false;
   });
+
+  $("#login form").submit(function(){
+    var form_name = $("#form_name").val();
+    localStorage.setItem("form_name", form_name);
+  });
+
+  var form_name = localStorage.getItem("form_name");
+
+  if(form_name != null && form_name != "undefined"){
+    var about_parrafo = $("#about p");
+
+    about_parrafo.html("Bienvenido, "+form_name);
+    about_parrafo.append("<a href='#' id='logout'>Cerrar Sesión </a>");
+
+    $("#login").hide();
+  
+    $("#logout").click(()=>{
+      localStorage.clear();
+      location.reload();
+    });
+  }
+  if(window.location.href.indexOf('about')> -1){
+    $('#acordeon').accordion();
+  }
+
+  if(window.location.href.indexOf('reloj')> -1){
+    setInterval(()=>{
+      var reloj = moment().format("hh:mm:ss");
+      $('#reloj').html(reloj);
+    },1000);
+  }
+
+  if(window.location.href.indexOf('contact')> -1){
+
+    $("form input[name='date']").datepicker({
+      dateFormat: 'dd-mm-yy'
+    });
+    $.validate({
+      lang: 'es'
+    });
+  }
 
   });
 
